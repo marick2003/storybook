@@ -18,7 +18,7 @@ export const Jsx = () => ({
   render(h) {
     return <my-button onClick={this.action} name="test">With JSX</my-button>;
   },
-  methods: { action: linkTo('clicked') },
+  methods: { action: linkTo('clicked') }, 
 });
 
 export const Emoji = () => ({
