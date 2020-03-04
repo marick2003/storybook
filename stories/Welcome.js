@@ -45,7 +45,7 @@ export default {
         opacity: 0.5,
       },
     };
-  },
+  }, 
 
   template: `
     <div :style="main">
