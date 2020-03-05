@@ -39,14 +39,13 @@ export default {
         borderRadius: 4,
         backgroundColor: '#f3f2f2',
         color: '#3a3a3a',
-      },
+      }, 
 
       note: {
         opacity: 0.5,
       },
     };
   }, 
-
   template: `
     <div :style="main">
       <h1>Welcome to STORYBOOK</h1>
