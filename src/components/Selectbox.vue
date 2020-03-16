@@ -1,23 +1,22 @@
 <template>
-        <select id="selectbox">          
-             <option v-for="(text, value) in options" :value="value" :key="value">
-                {{ text }}
+        <select id="selectbox" @change="onChange($event)">          
+             <option v-for="(item, value) in options" :value="item.value" :key="value">
+                {{ item.text }}
             </option>
-          
         </select>
 </template>
 <script>
 export default {
-    name:'selectbox',
-  
-    data:{
-       selected: 'A',
-       options: {
-            "1": "foo",
-            "2": "bar",
-            "3": "baz"
-        }
+    name:'Selectbox',
+    props:{
+       options:[]
     },
+    methods:{
+        onChange(event){
+          
+           this.$emit("updateselectbox", event);
+        }
+    }
 
 }
 </script>

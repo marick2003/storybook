@@ -9,13 +9,16 @@ export default {
   };
 export const Options = () => ({
   components: { MySelection },
-  template: '<MySelection :options="options"></MySelection>',
-  data:{
-        options: {
-            "1": "foo",
-            "2": "bar",
-            "3": "baz"
-        }
-    },
+  template: '<MySelection :options="aoptions"></MySelection>',
+  data:function() {
+
+    return {
+        aoptions:[
+          { text: 'One', value: 'A' },
+          { text: 'Two', value: 'B' },
+          { text: 'Three', value: 'C' }
+        ]
+     }
+  }
 });
 
